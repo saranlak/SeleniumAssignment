@@ -5,28 +5,31 @@ public class IsPrime {
 	public static void main(String[] args) {
 		int test=17;
 		int flag=0;
-		int check=test/2;
+		int check=0;
 		if (test<2)
 		{
 			System.out.println(test+" is not a prime no");
 		}
 		else
 		{
-			for(int i=2;i<=check;i++)
+			for(int i=2;i<=test;i++)
 			{
 				if(test%i==0) 
 				{
-					System.out.println(test+" is not a prime no");
-					flag=1;
-					break;
+					
+					flag++;
+				
 				}
 			}	
-				if(flag==0)
+				if(flag<2)
 				{
 					System.out.println(test+" is a prime no");
 				}
-			
+				else {
+					System.out.println(test+" is not a prime no");
+				}
 		}
+		
 	}
 	
 }
